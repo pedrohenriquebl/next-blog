@@ -17,7 +17,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generatedMetadata({ params }: BlogPostPageProps)
+export async function generateMetadata({ params }: BlogPostPageProps)
     : Promise<Metadata | undefined> {
     const { slug } = await params;
     const post = allPosts.find((post) => post.slug === slug);
